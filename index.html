@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Database</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Movies Database</h1>
+    <div class="filters">
+        <input type="text" id="titleFilter" placeholder="Filter by title">
+        <input type="text" id="directorFilter" placeholder="Filter by director">
+        <input type="text" id="countryFilter" placeholder="Filter by country">
+        <input type="number" id="yearFromFilter" placeholder="From year" min="1900" max="2100">
+        <input type="number" id="yearToFilter" placeholder="To year" min="1900" max="2100">
+    </div>
+    <table id="moviesTable">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>
+                    Release Year
+                    <span class="sort-arrow" data-column="release_year" data-order="asc">↑</span>
+                    <span class="sort-arrow" data-column="release_year" data-order="desc">↓</span>
+                </th>
+                <th>
+                    Box Office
+                    <span class="sort-arrow" data-column="box_office" data-order="asc">↑</span>
+                    <span class="sort-arrow" data-column="box_office" data-order="desc">↓</span>
+                </th>
+                <th>Director(s)</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be populated by JavaScript -->
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
